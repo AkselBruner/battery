@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.2s linear;
+}
+
+body.dark {
+    background: #161616;
+
+}
+
+h1 {
+    color: #161616;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #161616;
+    -webkit-text-fill-color:#f0f0f0;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.key {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #0a0a0a;
+    color: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    cursor: default;
+}
+
+.key.active {
+    border: 2px solid rgb(153, 0, 255);
+    color: rgb(153, 0, 255);
+}
+
+.composer {
+    width: 260px;
+    margin-top: 20px;
+    color: #0a0a0a;
+}
+.composer #input {
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding: 10px 15px;
+
+}
+.composer button {
+    width: 100%;
+    height: 40px;
+    background-color:rgb(153, 0, 255);
+    border: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: rgb(153, 0, 255);
+    border-radius: 25px ;
+
+}
+.composer button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+footer {
+    margin-top: 20px;
+    color:rgb(153, 0, 255);
+    font-size: 15px;
+   
+}
+
+body.dark {
+    background: #292929;
+  }
+  
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .label {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+  
+  }
+  
+  
+  .label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+  }
+  
+  .checkbox:checked + .label .ball {
+    transform: translateX(24px);
+  }
+  
+  .fa-moon {
+    color: rgb(153, 0, 255);
+  }
+  
+  .fa-sun {
+    color: rgb(153, 0, 255);
+  }
+  
